@@ -25,7 +25,7 @@ jobs:
     - name: Test service URLs
       run: |
           echo "⏳ Waiting for pod to start..."
-          sleep 30
+          sleep 120
           kubectl get pods
           kubectl get svc
           minikube service list
