@@ -24,6 +24,8 @@ jobs:
         kubectl apply -f k8s-node-app.yaml
     - name: Test service URLs
       run: |
+          echo "⏳ Waiting for pod to start..."
+          sleep 30
           kubectl get pods
           kubectl get svc
           minikube service list
