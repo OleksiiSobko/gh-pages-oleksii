@@ -24,5 +24,8 @@ jobs:
         kubectl apply -f k8s-node-app.yaml
     - name: Test service URLs
       run: |
+          kubectl get pods
+          kubectl get svc
           minikube service list
+          echo "App URL:"
           minikube service nodejs-app --url
